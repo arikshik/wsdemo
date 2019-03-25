@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>EPV Websockets Demo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="contact1">
+		<div class="container-contact1">
+
+			<div class="contact1-form validate-form">
+				<span class="contact1-form-title">
+					EPV chat
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<input id="nameInput" class="input1" type="text" name="name" placeholder="Type your name here...">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button id="connectBtn" class="contact1-form-btn" >
+						<span id="connectBtnText">
+							Connect
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+
+				<span style="font-size:12px;">
+					Topics:
+					<button id="topic1btn" class="contact1-form-btn topic-btn" disabled="true">TASKS</button>
+					<button id="topic2btn" class="contact1-form-btn topic-btn" disabled="true">10bis</button>
+					<button id="topic3btn" class="contact1-form-btn topic-btn" disabled="true">ALERTS</button>
+				</span>	
+
+				<div class="wrap-input1 validate-input" data-validate = "Message is required">
+					<div contenteditable="true" id="messagesArea" class="input1" name="message" style="overflow-y: scroll;" >
+
+					</div>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" >
+					<input id="messageInput" class="input1" type="text" placeholder="Type your message here..." disabled="true">
+					<span class="shadow-input1"></span>
+				</div>
+
+
+				<div class="container-contact1-form-btn" >
+					<button id="sendMessageBtn" class="contact1-form-btn" disabled="true">
+						<span  id="sendBtnText">
+							Send
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+
+
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+	<script src="js/main.js"></script>
+
+</body>
+</html>
