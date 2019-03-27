@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>EPV Websockets Demo (Chat)</title>
+	<title>EPV Websockets Demo (Admin)</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -26,53 +26,43 @@
 	<div class="contact1">
 		<div class="container-contact1">
 
+
 			<div class="contact1-form validate-form">
 				<span class="contact1-form-title"> EPV Websockets Demo </span>
-				<span class="contact1-form-title2"> (Chat App) </span>
+				<span class="contact1-form-title2"> (Admin) </span>
 
-				<div class="wrap-input1 validate-input" data-validate = "Name is required">
-					<input id="nameInput" class="input1" type="text" name="name" placeholder="Type your name here...">
+
+				<div style="padding-top: 20px;"">
+					<span style="font-size:12px;">
+						Select a topic:
+					</span>	
+	
+					<select id="adminTopicSelect">
+					  <option>TASKS</option>
+					  <option>10bis</option>
+					  <option>ALERTS</option>
+					</select>
+				  </div>
+	
+				<div class="wrap-input1 validate-input" data-validate = "Message is required">
+					<input id="adminMessageInput" class="input1" type="text" name="name" placeholder="Type your message here...">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="container-contact1-form-btn">
-					<button id="connectBtn" class="contact1-form-btn" >
-						<span id="connectBtnText">
-							Connect
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-					</button>
-				</div>
-
-				<span style="font-size:12px;">
-					Topics:
-					<button id="topic1btn" class="contact1-form-btn topic-btn" disabled="true">TASKS</button>
-					<button id="topic2btn" class="contact1-form-btn topic-btn" disabled="true">10bis</button>
-					<button id="topic3btn" class="contact1-form-btn topic-btn" disabled="true">ALERTS</button>
-				</span>	
-
-				<div class="wrap-input1 validate-input" data-validate = "Message is required">
-					<div contenteditable="true" id="messagesArea" class="input1" name="message" style="overflow-y: scroll;" >
-
-					</div>
-					<span class="shadow-input1"></span>
-				</div>
-
-				<div class="wrap-input1 validate-input" >
-					<input id="messageInput" class="input1" type="text" placeholder="Type your message here..." disabled="true">
-					<span class="shadow-input1"></span>
-				</div>
-
-
-				<div class="container-contact1-form-btn" >
-					<button id="sendMessageBtn" class="contact1-form-btn" disabled="true">
-						<span  id="sendBtnText">
+					<button id="adminSendBtn" class="contact1-form-btn" >
+						<span>
 							Send
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
 						</span>
 					</button>
 				</div>
 
+				<div style="padding-top: 20px;">
+					<span id="adminSendResult" style="font-size:12px;">
+						
+					</span>	
+				  </div>
 
 				
 			</div>
