@@ -2,7 +2,8 @@
 (function ($) {
     "use strict";
     
-    var webSocketServerAddress = '18.220.253.248';
+    var webSocketServerAddress = 'localhost'; 
+    //var webSocketServerAddress = '18.220.253.248'; 
     var webSocketServerPort = '1337';
 
     var nameInput = $('#nameInput');
@@ -17,6 +18,9 @@
     var topic1sub = false;
     var topic2sub = false;
     var topic3sub = false;
+
+    var adminMessageInput = $('#adminMessageInput');
+    var adminSendResult =  $('#adminSendResult');
 
     var connection;
     var username;
@@ -171,7 +175,32 @@
         sendMessage("textMessage", messageInput.val(), username, myColor);
         messageInput.val('');
 
+    });
+
+    $('#adminSendBtn').on('click',function(){
+
+        var adminMessageObj = 
+        {
+            topic: $( "#adminTopicSelect option:selected" ).text(),
+            message: adminMessageInput.val()
+        }
+
+
+        $.ajax({
+            url: '/publishToTopic',
+            type: 'post',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                adminSendResult.text("Message published successfully."); //
+            },
+            data: JSON.stringify(adminMessageObj)
+        });
+        
+        adminMessageInput.val('');
+
     });    
+
 
     function sendMessage(_type, _data, _author, _color) {
 
