@@ -1,5 +1,7 @@
 # Websockets Demo - Chat Application
 
+<< README IN PROGRESS>
+
 ## Intro
 This is a demo chat application for introducing Websockets technology.
 
@@ -8,5 +10,7 @@ The server is written in Node.js, implements a websocket server using [websocket
 
 ## Client
 The client is plain HTML/JS/CSS with some JQuery and the HTML5 Websocket API.
+
+
 
 
