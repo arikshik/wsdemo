@@ -185,7 +185,7 @@ iframe {
   justify-content: space-between;
   align-items: center;
 
-  padding: 90px 130px 88px 148px;
+  padding: 40px 130px 88px 148px;
 }
 
 /*------------------------------------------------------------------
@@ -212,8 +212,18 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
-  padding-bottom: 44px;
+  padding-bottom: 20px;
 }
+
+.contact1-form-title2 {
+  display: block;
+  font-family: Montserrat-ExtraBold;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+}
+
 
 input.input1 {
   height: 50px;
@@ -469,3 +479,4 @@ textarea.input1 + .shadow-input1 {
     opacity: 1;
   }
 }
+
